@@ -1,0 +1,292 @@
+.topbar {
+  height: 70px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin-left: 0;
+  gap: 1rem;
+}
+
+.mobileStatus {
+  display: none;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.left h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--text-primary);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background-color: var(--bg-secondary);
+}
+
+.switchBtn {
+  min-width: 82px;
+  height: 36px;
+  border-radius: 0.375rem;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.switchBtn span {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.switchBtn small {
+  font-size: 0.625rem;
+  font-weight: 500;
+}
+
+.switchBtn:hover {
+  color: var(--text-primary);
+}
+
+.switchActive {
+  color: var(--primary-color);
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.tutorialBtn {
+  height: 30px;
+  border: 1px solid var(--text-primary);
+  border-radius: 0.25rem;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  transition: opacity 0.2s ease;
+}
+
+.tutorialBtn:hover {
+  opacity: 0.7;
+}
+
+.feedbackBtn {
+  height: 36px;
+  padding: 0 0.875rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.feedbackBtn:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--text-secondary);
+}
+
+.playIcon {
+  font-size: 0.625rem;
+}
+
+.userMenu {
+  position: relative;
+}
+
+.userBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: opacity 0.2s ease;
+}
+
+.userBtn:hover {
+  opacity: 0.75;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  box-shadow: var(--shadow-md);
+  min-width: 160px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.dropdownHeader {
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.userSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 1rem;
+}
+
+.userSummary strong {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.userSummary span,
+.userSummary em {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-style: normal;
+}
+
+.logoutBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.logoutBtn:hover {
+  background-color: var(--bg-secondary);
+}
+
+@media (max-width: 1024px) {
+  .topbar {
+    padding: 0 1.5rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    height: 132px;
+    margin-left: 0;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-rows: 36px 44px 44px;
+  }
+
+  .mobileStatus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-primary);
+    font-weight: 700;
+    padding: 0 1.5rem;
+    grid-column: 1 / -1;
+  }
+
+  .statusIcons {
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+  }
+
+  .left,
+  .right {
+    align-self: center;
+  }
+
+  .right {
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .menuBtn {
+    display: flex;
+  }
+
+  .left {
+    gap: 0;
+  }
+
+  .left h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9375rem;
+  }
+
+  .tutorialBtn {
+    display: none;
+  }
+
+  .userBtn svg:last-child {
+    display: none;
+  }
+
+  .userSwitcher {
+    flex: 1;
+    max-width: none;
+  }
+
+  .switchBtn {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .feedbackBtn {
+    height: 34px;
+    padding: 0 0.625rem;
+    font-size: 0.75rem;
+  }
+
+  .dropdown {
+    right: 0;
+    left: auto;
+  }
+}
