@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 # Hintro Dashboard
-
 Frontend assignment for the Hintro dashboard. The app follows the provided desktop and mobile designs, uses the mock API data, supports the two required users, and stores feedback in localStorage.
 
 ## Tech Stack
-
 - Next.js
 - React
 - CSS Modules
@@ -12,7 +9,6 @@ Frontend assignment for the Hintro dashboard. The app follows the provided deskt
 - localStorage
 
 ## Features
-
 - Dashboard with total sessions, average duration, AI usage, and last session stats
 - Recent calls list from the mock API
 - Empty dashboard state for `u1`
@@ -101,6 +97,5 @@ src/
 - Dashboard data comes from the mock API and is normalized in `src/lib/api.js`.
 - Feedback entries are saved in browser localStorage.
 - If the mock API is unavailable, the app can still show fallback mock data for local testing.
-=======
 
->>>>>>> 3bff2782728686a8dd2cf52f8c167f49bdd15524
+===
